@@ -1,0 +1,45 @@
+<div class="related">
+  <h2>Related Posts</h2>
+  <div class="related-posts">
+  {% assign related_post_count = 0 %}
+  {% for post in site.related_posts %}
+    {% if related_post_count == site.rel_post_count %}
+      {% break %}
+    {% endif %}
+    {% for tag in post.tags %}
+      {% if page.tags contains tag %}
+        <div class="related-post">
+          <span class="post-date">{{ post.date | date_to_string }}</span>
+          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </div>
+        {% assign related_post_count = related_post_count | plus: 1 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% assign posts_left = site.rel_post_count | minus: related_post_count %}
+  {% unless posts_left == 0 %}
+    {% for post in site.related_posts %}
+      {% if posts_left == 0 %}
+        {% break %}
+      {% endif %}
+
+      {% assign already_related = false %}
+      {% for tag in post.tags %}
+        {% if page.tags contains tag %}
+          {% assign already_related = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      {% unless already_related %}
+        {% assign posts_left = posts_left | minus: 1 %}
+        <div class="related-post">
+          <span class="post-date">{{ post.date | date_to_string }}</span>
+          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </div>
+      {% endunless %}
+    {% endfor %}
+  {% endunless %}
+  </div>
+</div>

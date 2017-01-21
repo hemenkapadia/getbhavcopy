@@ -1,0 +1,34 @@
+<div class="comments">
+    <h2>Comments</h2>
+    {% if jekyll.environment == "production" %}
+        {% if page.comments %}
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLE IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                 */
+                 /**
+                var disqus_config = function () {
+                    this.page.url = '{{ page.url }}';  
+                    this.page.identifier = '{{ page.id }}'; 
+                };
+                */
+                (function() {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+
+                    s.src = '//{{ site.disqus_src }}/embed.js';
+
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        {% else %}
+            <p>Comments disabled on this post.</p>
+        {% endif %}
+    {% else %}
+        <p>Comments enabled only in Production environment.</p>
+    {% endif %}
+
+</div>

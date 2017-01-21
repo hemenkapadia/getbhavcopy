@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body class="{{ site.pooletheme }} {% if site.layout == 'reverse' %}  layout-reverse {% endif %}">
+
+    {% include sidebar.html %}
+
+    <div class="content container">
+      {{ content }}
+    </div>
+
+    {% if site.ga_enable == true %}
+      {% include analytics.html %}
+    {% endif %}
+    
+  </body>
+</html>
+
+<!-- This default template is referred by page.html and post.html.
+     This default template is configured in layout front matter option of these
+     pages.
+     This includes head.html and sidebar.html
+-->

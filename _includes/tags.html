@@ -1,0 +1,8 @@
+<div class="tags">
+  <p><i class="fa fa-tags" aria-hidden="true"></i> Tags:</p>
+  <ul class="tagslist">
+    {% for tag in page.tags %}
+    <li><a href="{{ site.baseurl }}/tags.html#{{ tag | slugify }}">{{ tag | slugify }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

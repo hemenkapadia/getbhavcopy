@@ -1,0 +1,39 @@
+---
+layout: page
+title: Tags
+---
+{% capture tags_string%}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_array = tags_string | split:','  %}
+
+{% capture slugified_tags_string %}{% for tag in tags_array %}{{ tag | strip | slugify }}#{{ tag | strip }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign slugified_tags_array = slugified_tags_string | split:','  %}
+
+{% capture slugified_string %}{% for tag in tags_array %}{{ tag | strip | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign slugified_array = slugified_string | split:',' | sort  %}
+
+<div class="tags">
+  <ul class="tagslist">
+    {% for slugified_tag in slugified_array %}
+    <li><a href="#{{ slugified_tag }}">{{ slugified_tag }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="post-list">
+{% for slugified_tag in slugified_array %}
+  <div id="{{ slugified_tag }}" class="post-list-year">{{ slugified_tag }}</div>
+  {% for slug_tag in slugified_tags_array %}
+    {% assign slug = slug_tag | split:'#' | first | strip %}
+    {% assign tag  = slug_tag | split:'#' | last  %}
+    {% if slugified_tag == slug %}
+      {% for post in site.tags[tag] %}
+        <div class="post-list-item tag-archive">
+        <span class="post-list-date">{{ post.date | date_to_string }}</span>
+        <a class="post-list-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | strip}}</a>
+        </div>
+      {% endfor %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</div>

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <p class="post-date-in-post">{{ page.date | date_to_string }}</p>
+  {{ content }}
+</div>
+
+{% include tags.html %}
+
+{% include related.html %}
+
+{% if site.disqus_enable == true %}
+    {% include comments.html %}
+{% endif %}
