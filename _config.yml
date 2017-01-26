@@ -58,7 +58,7 @@ kramdown:
 
 # Serving
 detach:                         false
-baseurl:                        /getbhavcopy
+#baseurl:                        /getbhavcopy
 permalink:                      /blog/:year/:month/:day/:title.html
 paginate_path:                  /blog/page:num
 paginate:                       25
