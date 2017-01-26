@@ -60,7 +60,7 @@ kramdown:
 detach:                         false
 baseurl:                        /getbhavcopy
 permalink:                      /blog/:year/:month/:day/:title.html
-paginate_path:                  /page:num
+paginate_path:                  /blog/page:num
 paginate:                       25
 timezone:                       Asia/Calcutta
 
