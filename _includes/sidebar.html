@@ -40,7 +40,9 @@
       {% for node in pages_list %}
         {% if node.title != null and node.title != "Getbhavcopy" %}
           {% if node.layout == "page" %}
+            {% unless node.hideinsidebar %}
             <a class="sidebar-nav-item {% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}.html">{{ node.title }}</a>
+            {% endunless %}
           {% endif %}
         {% endif %}
       {% endfor %}
