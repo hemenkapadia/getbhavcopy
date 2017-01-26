@@ -1,1 +1,88 @@
-theme: jekyll-theme-cayman
+# Blog Information
+title:                          "Getbhavcopy"
+tagline:                        'Free NSE and BSE data downloader'
+description:                    'Free EOD data downloader for Indian Stock Exchanges'
+
+# Author information
+author:
+  name:                         "Hemen Kapadia"
+  email:                        hemen.kapadia@gmail.com
+  twitter:                      null
+  github:                       hemenkapadia
+  linkedin:                     kapadiahemen
+  facebook:                     null
+  instagram:                    null
+  googleplus:                   null
+  youtube:                      null
+  stackoverflow:                null
+
+# Directories
+source:                         .
+destination:                    ./_site
+plugins_dir:                    ./_plugins
+layouts_dir:                    ./_layouts
+data_dir:                       ./_data
+includes_dir:                   ./_includes
+#collections:  null
+
+# Reading source directories
+safe:                           false
+include:                        [".htaccess"]
+exclude:                        []
+keep_files:                     [".git", ".svn"]
+encoding:                       "utf-8"
+markdown_ext:                   "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts:                    null
+limit_posts:                    0
+future:                         false
+unpublished:                    false
+
+# Conversion
+markdown:                       kramdown
+highlighter:                    rouge
+lsi:                            false
+excerpt_separator:              "\n\n"
+incremental:                    false
+
+kramdown:
+  input:                        GFM
+  auto_ids:                     true
+  footnote_nr:                  1
+  entity_output:                as_char
+  toc_levels:                   1..6
+  smart_quotes:                 lsquo,rsquo,ldquo,rdquo
+  enable_coderay:               false
+
+
+# Serving
+detach:                         false
+baseurl:                        /getbhavcopy
+permalink:                      /blog/:year/:month/:day/:title.html
+paginate_path:                  /page:num
+paginate:                       25
+timezone:                       Asia/Calcutta
+
+quiet:                          false
+defaults:                       []
+
+# Additional Plugins
+whitelist:                      []
+gems:                           ["jekyll-sitemap", "jekyll-gist", "jekyll-paginate"]
+
+# Theme configurations
+pooletheme:                     theme-base-00
+layout:                         normal              # [normal | reverse]
+sidemenutype:                   nonsticky           # [nonsticky | sticky]
+showexcerpt:                    true
+forkmeribbon:                   show                # [show|hide]
+rel_post_count:                 3
+
+# Comments - Disqus Configuration
+disqus_enable:                  true 
+disqus_src:                     getbhavcopy.disqus.com     # replace this
+
+# Comments - Google Analytics Configuration
+ga_enable:                      true
+ga_id:                          UA-919602-2          # replace this
