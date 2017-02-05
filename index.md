@@ -7,7 +7,7 @@ Getbhavcopy is a FREE data downloader for Indian Stock Exchanges, [NSE][1] and [
 
 Getbhavcopy can download daily and historical EOD data for Equities, Indices and Futures. The downloaded data is exported in a format that can be easily imported by leading technical analysis softwares like [Metastock][3], [Amibroker][4] and [Fcharts][5].
 
-![Getbhavcopy screenshot](/assets/images/Getbhavcopy.png)
+![Getbhavcopy screenshot](/assets/images/Getbhavcopy.gif)
 
 ### Download
 
@@ -19,7 +19,7 @@ By downloading and using Getbhavcopy, you agree to [Getbhavcopy End User Licensi
 
 If you find Getbhavcopy of value and would like to appreciate my efforts, I recommend a small donation, which helps cover the domain expenses, but more than that goes a long way to keep me motivated to add more features to Getbhavcopy.
 
-I recommend you donate using my [PayPal.Me][9] link.
+I recommend you donate using my [PayPal.Me <i class="fa fa-paypal" aria-hidden="true"></i>][9] link.
 
 
 [1]: https://www.nseindia.com/
