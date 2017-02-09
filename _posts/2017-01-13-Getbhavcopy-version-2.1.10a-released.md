@@ -4,10 +4,7 @@ title: Getbhavcopy version 2.1.10a released
 excerpt: Release log for Getbhavcopy version 2.1.10a 
 comments: true
 tags: 
-    - 'Hemen Kapadia'
-    - Getbhavcopy
     - 'Version Updates'
-    - 'News and Announcements'
 ---
 
 Getbhavcopy version 2.1.9a, which i released couple of days back, did happen to resolve the issues with NSE data download for most of the users. However some users still using Windows XP were reporting the following error message while trying to download data with version 2.1.9a:
