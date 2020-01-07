@@ -1,4 +1,4 @@
 {
-  "tag_name": "3.0.1a|4.0.0a",
-  "name": "Getbhavcopy version 3.0.1a"
+  "tag_name": "3.0.1a|3.0.2a||4.0.0a",
+  "name": "Getbhavcopy version 3.0.2a"
 }
